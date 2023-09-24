@@ -1,0 +1,37 @@
+---
+import "../css/global.css";
+import Frontmatter from '../components/Frontmatter.astro';
+import Left from '../components/Left.astro';
+import Card from '../components/PlaylistCard.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+<Frontmatter />
+<body>
+    <main>
+        <div class="grid1_3">
+            <Left />
+            <div>
+                <Navigation />
+                <div class="coverbox">
+                    <h1>Spotify-playlister</h1>
+                    <div class="maingrid">
+                    <Card cover="https://picsum.photos/id/65/150/150" header="Sunsets" text="Modlys kan bare noget"/>
+                    <Card cover="https://picsum.photos/id/68/150/150" header="Tilladt at bade" text="Hør de nyeste svedigste beats fra Double GG"/>
+                    <Card cover="https://picsum.photos/id/76/150/150" header="Når det skal være hytteligt" text="Den grønne cykel er parkeret"/>
+                    <Card cover="https://picsum.photos/id/240/150/150" header="Die Mauer" text="Hør de nyeste svedigste beats fra Double GG"/>
+                    <Card cover="https://picsum.photos/id/331/150/150" header="Snoop Dogg" text="Hør de nyeste svedigste beats fra Double GG"/>
+                    <Card cover="https://picsum.photos/id/325/150/150" header="Snoop Dogg" text="Hør de nyeste svedigste beats fra Double GG"/>
+                    <Card cover="https://picsum.photos/id/334/150/150" header="Snoop Dogg" text="Hør de nyeste svedigste beats fra Double GG"/>
+                    <Card cover="https://picsum.photos/id/338/150/150" header="BeachInTheRain" text="Hør de nyeste svedigste beats fra Double GG"/>
+                    <Card cover="https://picsum.photos/id/349/150/150" header="Snoop Dogg" text="Hør de nyeste svedigste beats fra Double GG"/>
+                    <Card cover="https://picsum.photos/id/364/150/150" header="Boring 727" text="Hør de nyeste svedigste beats fra Double GG"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <Footer/>
+    </main>
+</body>
+    
+

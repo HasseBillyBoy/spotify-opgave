@@ -1,0 +1,48 @@
+---
+import "../css/global.css";
+import Frontmatter from '../components/Frontmatter.astro';
+import Left from '../components/Left.astro';
+import Card from '../components/PlaylistCard.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import SearchCard from "../components/SearchCard.astro";
+---
+<Frontmatter />
+<body>
+    <main>
+        <div class="grid1_3">
+            <Left />
+            <div>
+                <Navigation hasSearch={true} title="Search"></Navigation>
+                    <!-- Her fortæller vi Navigation-komponenten at hasSearch er true, såfremt titlen er "Search".
+                    NÅR dette er tilfældet, så skal noget indtræffe - nemlig at et søgefelt skal vises, som vi kan se under Navigation.
+                    Det er altså en 'conditional rendering'. -->
+                <div class="coverbox">
+                    <h1>Udforsk alle</h1>
+                    <div class="maingrid">
+                        <!-- Det vi mangler på (nogle af) nedenstående SearchCards, er nogle conditional renderinger, 
+                            der altså fortæller at dette element skal have et "new"-badge på sig. 
+                            Her skal du se Jonas' video #15: https://www.youtube.com/watch?v=H0358zMRvhY&list=PLCx1FpZ4Dtb3_siiU1YtaIKJmZEzu8lje&index=15 
+                         -->
+                    <SearchCard variant="red" cover="https://picsum.photos/id/65/150/150" header="Sunsets" />
+                    <SearchCard variant="green" cover="https://picsum.photos/id/68/150/150" header="Tilladt at bade" />
+                    <SearchCard variant="blue" cover="https://picsum.photos/id/76/150/150" header="Når det skal være hytteligt" />
+                    <SearchCard variant="red" cover="https://picsum.photos/id/240/150/150" header="Die Mauer"/>
+                    <SearchCard variant="green" cover="https://picsum.photos/id/331/150/150" header="Snoop Dogg"/>
+                    <SearchCard variant="blue" cover="https://picsum.photos/id/325/150/150" header="Snoop Dogg"/>
+                    <SearchCard variant="red"cover="https://picsum.photos/id/334/150/150" header="Snoop Dogg"/>
+                    <SearchCard variant="green"cover="https://picsum.photos/id/338/150/150" header="BeachInTheRain"/>
+                    <SearchCard variant="blue"cover="https://picsum.photos/id/349/150/150" header="Snoop Dogg"/>
+                    <SearchCard variant="red"cover="https://picsum.photos/id/364/150/150" header="Boring 727"/>
+                    <SearchCard variant="red" cover="https://picsum.photos/id/65/150/150" header="Sunsets" />
+                    <SearchCard variant="green" cover="https://picsum.photos/id/68/150/150" header="Tilladt at bade" />
+                    <SearchCard variant="blue" cover="https://picsum.photos/id/76/150/150" header="Når det skal være hytteligt" />
+                    <SearchCard variant="red" cover="https://picsum.photos/id/240/150/150" header="Die Mauer"/>
+                    <SearchCard variant="green" cover="https://picsum.photos/id/331/150/150" header="Snoop Dogg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <Footer/>
+    </main>
+</body>

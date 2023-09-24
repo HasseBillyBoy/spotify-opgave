@@ -1,0 +1,52 @@
+---
+const {variant, cover, header} = Astro.props;
+---
+
+<article>
+    <div class={variant}>
+         <img src={cover} alt="noget">
+         <h2>{header}</h2>
+    </div>
+</article>
+
+<style>
+
+div {
+    padding: 15px;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden; /* https://developer.mozilla.org/en-US/docs/Web/CSS/overflow */
+}
+
+div:hover {
+    cursor: pointer;
+}
+
+img {
+    position: absolute;
+    translate: 60px 45px;
+    scale: 0.7;
+    rotate: 25deg;
+}
+
+h2 {
+    position: absolute;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+</style>

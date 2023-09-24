@@ -1,0 +1,89 @@
+---
+import "../css/global.css";
+import LinkButton from "./LinkButton.astro";
+---
+
+<div>
+    <div class="spothjemsøgbox">
+        <div class="spot">
+            <a href="/"><img class="logo" src="/icons/logo.svg" alt="logo"></a>
+        </div>
+        <div class="hjem">
+            <img class="hjemikon" src="/icons/home-filled.svg" alt="hjem">
+            <LinkButton variant="secondary" sti="/" text="Hjem"/>
+        </div>
+        <div class="søg">
+            <img class="søgikon" src="/icons/search-icon.svg" alt="søg">
+            <LinkButton variant="secondary" sti="search" text="Søg"/>
+        </div>
+    </div>
+    <div class="bibbox">
+        <div class="bibliotek">
+            <img class="bibikon" src="/icons/library-icon-filled.svg" alt="bibliotek">
+            <LinkButton variant="secondary" text="Dit bibliotek"/>
+        </div>
+    </div>
+</div>
+
+<style>
+
+    .spothjemsøgbox {
+        background-color: rgb(16, 16, 16);
+        border-radius: 5px;
+    }
+
+    .spot {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+    }
+
+    .logo {
+        filter: invert(1);
+        width: 80px;
+        height: 80px;
+        }
+
+    .hjem {
+        display: flex;
+        padding-left: 20px;
+    }
+
+    .hjemikon {
+        width: 25px;
+        height: 25px;
+        filter: invert(1);
+    }
+
+    .søg {
+        display: flex;
+        padding: 20px;
+    }
+    .søgikon {
+        width: 25px;
+        height: 25px;
+        filter: invert(1);
+    }
+
+    .bibbox {
+        background-color: rgb(16, 16, 16);
+    }
+
+    .bibliotek {
+        display: flex;
+        padding-left: 20px;
+    }
+
+    .bibikon {
+        width: 25px;
+        height: 25px;
+        filter: invert(1);
+    }
+
+    p {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+</style>

@@ -1,0 +1,41 @@
+---
+const {variant, sti, text} = Astro.props;
+---
+
+<li>
+    <a class={variant} href={sti}><b>{text}</b></a>
+</li>
+
+<style>
+
+li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+a {
+padding: 15px 25px 15px 25px;
+border-radius: 40px;
+text-decoration: none;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16px;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+.primary {
+    background-color: rgb(248, 248, 248);
+    color: black;
+}
+
+.secondary {
+    background-color: rgb(16, 16, 16);
+    color: rgb(198, 196, 196);
+}
+.secondary:hover {
+    color: white;
+}
+
+</style>

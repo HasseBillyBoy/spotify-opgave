@@ -1,0 +1,78 @@
+---
+import LinkButton from "../components/LinkButton.astro";
+const { hasSearch } = Astro.props;
+---
+
+<header>
+    <nav>
+        <ul>
+            <div class="left">
+                <img class="back" src="/icons/back-btn.svg" alt="backbutton">
+                <img class="forward" src="/icons/forward-btn.svg" alt="forwardbutton">
+                {hasSearch && <input type="text" />} 
+                <!-- Vi giver variablen "hasSearch" til denne komponent oppe i fences. 
+                    "Hvis hasSearch, så" er udtrykt i "&&"-tegnene.
+                    Altså: Search = true, derfor søgefelt.
+                -->
+            </div>
+            <div class="right">
+                <LinkButton variant="secondary" text="Tilmeld dig" />
+                <LinkButton variant="primary" text="Log på"/>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    header {
+        background-color: rgb(16, 16, 16);
+        padding: 8px 0px 4px 0px;
+        border-radius: 5px;
+    }
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        justify-content: space-between;
+    }
+
+    .left {
+        display: flex;
+    }
+
+    .right {
+        display: flex;
+    }
+
+    .back {
+        padding: 0px 15px;
+        filter: invert(0.5);
+        cursor: no-drop;
+    }
+
+    .forward {
+        padding: 0px 15px;
+        filter: invert(0.5);
+        cursor: no-drop;
+    }
+
+    input[type=text] { /* https://www.w3schools.com/css/css_form.asp */
+        background-color: rgb(36, 36, 36);
+        padding: 10px 25px 10px 50px;
+        border-radius: 40px;
+        font-family: Arial;
+        color: white;
+        background-image: url('/icons/search-icon.svg');
+        background-position: 10px 8px;
+        background-repeat: no-repeat;
+    }
+
+    @media (min-width: 800px) {
+        ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    }
+</style>
